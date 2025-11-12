@@ -1,0 +1,131 @@
+.dsl-board .primary {
+  color: var(--dsl-primary);
+}
+
+.dsl-board .accent {
+  color: var(--dsl-accent);
+}
+
+.dsl-board .note {
+  color: var(--dsl-note);
+}
+
+.dsl-board .warning {
+  color: var(--dsl-warning);
+}
+
+.dsl-board .alert {
+  color: var(--dsl-alert);
+}
+
+.dsl-board .info {
+  color: var(--dsl-info);
+}
+
+.dsl-board .success {
+  color: var(--dsl-success);
+}
+
+.dsl-board .creative {
+  color: var(--dsl-creative);
+}
+
+.dsl-board .highlight-primary {
+  border-bottom: 3px solid var(--dsl-highlight-primary);
+}
+
+.dsl-board .highlight-key {
+  border-bottom: 3px solid var(--dsl-highlight-key);
+}
+
+.dsl-board .highlight-support {
+  border-bottom: 3px solid var(--dsl-highlight-support);
+}
+
+.dsl-board .highlight-creative {
+  border-bottom: 3px solid var(--dsl-highlight-creative);
+}
+
+.dsl-board .highlight-caution {
+  border-bottom: 3px solid var(--dsl-highlight-caution);
+}
+
+.dsl-board .highlight-info {
+  border-bottom: 3px solid var(--dsl-highlight-info);
+}
+
+.dsl-board .size-6xs {
+  font-size: var(--dsl-size-6xs);
+}
+
+.dsl-board .size-5xs {
+  font-size: var(--dsl-size-5xs);
+}
+
+.dsl-board .size-4xs {
+  font-size: var(--dsl-size-4xs);
+}
+
+.dsl-board .size-3xs {
+  font-size: var(--dsl-size-3xs);
+}
+
+.dsl-board .size-2xs {
+  font-size: var(--dsl-size-2xs);
+}
+
+.dsl-board .size-xs {
+  font-size: var(--dsl-size-xs);
+}
+
+.dsl-board .size-sm {
+  font-size: var(--dsl-size-sm);
+}
+
+.dsl-board .size-md {
+  font-size: var(--dsl-size-md);
+}
+
+.dsl-board .size-lg {
+  font-size: var(--dsl-size-lg);
+}
+
+.dsl-board .size-xl {
+  font-size: var(--dsl-size-xl);
+}
+
+.dsl-board .size-2xl {
+  font-size: var(--dsl-size-2xl);
+}
+
+.dsl-board .size-3xl {
+  font-size: var(--dsl-size-3xl);
+}
+
+.dsl-board .size-4xl {
+  font-size: var(--dsl-size-4xl);
+}
+
+.dsl-board .size-5xl {
+  font-size: var(--dsl-size-5xl);
+}
+
+.dsl-board .size-6xl {
+  font-size: var(--dsl-size-6xl);
+}
+
+.dsl-board .font-primary {
+  font-family: var(--dsl-font-primary);
+}
+
+.dsl-board .font-comic {
+  font-family: var(--dsl-font-comic);
+}
+
+.dsl-board .font-code {
+  font-family: var(--dsl-font-code);
+}
+
+.dsl-board .font-math {
+  font-family: var(--dsl-font-math);
+}

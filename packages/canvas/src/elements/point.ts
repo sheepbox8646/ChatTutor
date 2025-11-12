@@ -1,4 +1,4 @@
-import { defineElement } from "../element-structor"
+import { defineElement } from '../element-structor'
 
 export interface PointAttributes {
   x: number

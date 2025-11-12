@@ -1,6 +1,6 @@
-import type { AllAction } from "./action"
-import type { PageType } from "@chat-tutor/shared"
-import { v4 } from "uuid"
+import type { AllAction } from './action'
+import type { PageType } from '@chat-tutor/shared'
+import { v4 } from 'uuid'
 
 export type UserMessage = {
   type: 'user'

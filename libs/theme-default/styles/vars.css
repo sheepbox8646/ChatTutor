@@ -1,0 +1,62 @@
+/* Background */
+:root {
+  --dsl-background: #ffffff;
+  --dsl-background-accent: #f0f8ff;
+}
+
+/* Base Color Palette */
+:root {
+  --dsl-primary: #666666;
+  --dsl-note: #C7EDCC;
+  --dsl-warning: #F7B051;
+  --dsl-accent: #F7B051;
+  --dsl-alert: #F76E67;
+  --dsl-info: #4DDEF6;
+  --dsl-success: #66ECDD;
+  --dsl-creative: #CCB8E4;
+}
+
+/* Transparent Marker Colors */
+:root {
+  --dsl-highlight-primary: var(--dsl-highlight-key);
+  --dsl-highlight-key: var(--dsl-accent);
+  --dsl-highlight-support: var(--dsl-success);
+  --dsl-highlight-creative: var(--dsl-creative);
+  --dsl-highlight-caution: var(--dsl-warning);
+  --dsl-highlight-info: var(--dsl-info);
+}
+
+/* Size Table */
+:root {
+  --dsl-size-primary: 16px;
+  --dsl-size-6xs: 6px;
+  --dsl-size-5xs: 8px;
+  --dsl-size-4xs: 10px;
+  --dsl-size-3xs: 12px;
+  --dsl-size-2xs: 14px;
+  --dsl-size-xs: 16px;
+  --dsl-size-sm: 18px;
+  --dsl-size-md: 20px;
+  --dsl-size-lg: 24px;
+  --dsl-size-xl: 32px;
+  --dsl-size-2xl: 40px;
+  --dsl-size-3xl: 48px;
+  --dsl-size-4xl: 56px;
+  --dsl-size-5xl: 64px;
+  --dsl-size-6xl: 72px;
+}
+
+/* Font */
+:root {
+  --dsl-font-primary: 'Inter', sans-serif;
+  --dsl-font-comic: 'Comic Sans MS', cursive;
+  --dsl-font-code: 'JetBrains Mono', monospace;
+  --dsl-font-math: 'Times New Roman', serif;
+}
+
+/* Dash Array */
+:root {
+  --dsl-dasharray-solid: 0 0;
+  --dsl-dasharray-dashed: 10 5;
+  --dsl-dasharray-dotted: 2 2;
+}

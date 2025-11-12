@@ -1,0 +1,16 @@
+.container-common {
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  padding: 6px;
+}
+
+.container-interactive:hover {
+  background-color: #e7e7e7;
+}
+
+/* .preview {
+  background-color: var(--dsl-background);
+  color: var(--dsl-primary);
+  padding: 6px;
+  font-size: var(--dsl-size-2xs);
+} */

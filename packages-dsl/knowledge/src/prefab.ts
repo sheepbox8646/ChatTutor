@@ -1,0 +1,129 @@
+import type { RawContext } from '@dsl/renderer-core'
+
+export type PrefabKnowledgeProp = {
+  name: string
+  description: string
+  type: string
+  required: boolean
+  default?: string
+}
+
+export type PrefabKnowledge = {
+  name: string
+  description: string
+  tags: string[]
+  props: PrefabKnowledgeProp[]
+  examples: string[]
+  rules: string[]
+  slots: [string, string][]
+}
+
+const createPrefabKnowledgeUtils = <T extends RawContext>() => {
+  const props: PrefabKnowledgeProp[] = []
+  let _name = ''
+  let _description = ''
+  const tags: string[] = []
+  const examples: string[] = []
+  const rules: string[] = []
+  const slots: [string, string][] = []
+  const example = (example: string) => {
+    examples.push(example)
+    return utils
+  }
+  const rule = (rule: string) => {
+    rules.push(rule)
+    return utils
+  }
+  const slot = (slot: string, description: string) => {
+    slots.push([slot, description])
+    return utils
+  }
+  const prop = <K extends keyof T>(key: K) => {
+    const result: PrefabKnowledgeProp = { name: key.toString(), description: '', type: '', required: true }
+    const describe = (description: string) => {
+      result.description = description
+      return utils
+    }
+    const type = (type: string) => {
+      result.type = type
+      return utils
+    }
+    const optional = (defaultValue?: string) => {
+      result.required = false
+      result.default = defaultValue
+      return utils
+    }
+    props.push(result)
+    const utils = { describe, type, optional, slot }
+    return utils
+  }
+
+  const name = (name: string) => {
+    _name = name
+    return utils
+  }
+  const description = (description: string) => {
+    _description = description
+    return utils
+  }
+  const tag = (tag: string) => {
+    tags.push(tag)
+    return utils
+  }
+
+  const extend = (knowledge: PrefabKnowledge, includes: ('props' | 'tags' | 'examples' | 'rules')[] = ['props', 'tags', 'examples', 'rules']) => {
+    const propSet = new Set([...props, ...knowledge.props])
+    if (includes.includes('props')) {
+      props.length = 0
+      props.push(...propSet)
+    }
+    if (includes.includes('tags')) {
+      const tagSet = new Set([...tags, ...knowledge.tags])
+      tags.length = 0
+      tags.push(...tagSet)
+    }
+    const exampleSet = new Set([...examples, ...knowledge.examples])
+    if (includes.includes('examples')) {
+      examples.length = 0
+      examples.push(...exampleSet)
+    }
+    const ruleSet = new Set([...rules, ...knowledge.rules])
+    if (includes.includes('rules')) {
+      rules.length = 0
+      rules.push(...ruleSet)
+    }
+    return utils
+  }
+
+  const toKnowledge = (): PrefabKnowledge => ({
+    name: _name,
+    description: _description,
+    tags,
+    props,
+    examples,
+    rules,
+    slots,
+  })
+
+  const utils = {
+    example,
+    rule,
+    prop,
+    slot,
+    name,
+    description,
+    tag,
+    extend,
+    toKnowledge,
+  }
+
+  return utils
+}
+
+export const definePrefabKnowledge = <Props extends RawContext>(
+  callback: (utils: ReturnType<typeof createPrefabKnowledgeUtils<Props>>) => void
+) => {
+  const utils = createPrefabKnowledgeUtils<Props>()
+  callback(utils)
+  return utils.toKnowledge()
+}

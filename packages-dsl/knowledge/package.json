@@ -1,0 +1,16 @@
+{
+  "name": "@dsl/knowledge",
+  "version": "0.0.0",
+  "main": "index.js",
+  "exports": {
+    ".": "./src/index.ts",
+    "./default": "./src/defaults.ts",
+    "./embedding": "./src/embedding.ts"
+  },
+  "scripts": {
+  },
+  "packageManager": "pnpm@10.8.1",
+  "dependencies": {
+    "@dsl/renderer-core": "workspace:*"
+  }
+}
